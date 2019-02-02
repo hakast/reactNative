@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react';
-import { Image, AppRegistry, Text, View, StyleSheet, TextInput } from 'react-native';
+import {  Image, AppRegistry, Text, View, StyleSheet, TextInput } from 'react-native';
 import {Button} from 'react-native-elements';
 
-export default class FirstComp extends Component {
+export default class Github extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,7 +22,7 @@ export default class FirstComp extends Component {
       <View style={styles.firstComp}  >
 
         <View style={styles.image}>
-          <Image source={require('./images/0.jpg')}
+          <Image source={require('../assets/images/0.jpg')}
           />
         </View>
           <Text style={styles.textView}>
@@ -42,7 +42,6 @@ export default class FirstComp extends Component {
               onPress={this.toggleShow}
               title="Klicka"
           />
-      
       </View>
     );
   }

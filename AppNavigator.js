@@ -2,17 +2,17 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation';
 
 import Home from './Home';
-// import Friends from './Friends';
-import FirstComp from './FirstComp';
-import SecComp from './SecComp';
-import ThirdComp from './ThirdComp';
+import Github from './components/Github';
+import Cars from './components/Cars';
+import Contact from './components/Contact';
+import ReadMoreHomePage from './components/ReadMoreHomePage';
 
 const AppNavigator = createStackNavigator({
     Home: { screen: Home },
-    // Friends: { screen: Friends },
-    FirstComp: { screen: FirstComp },
-    SecComp: { screen: SecComp },
-    ThirdComp: { screen: ThirdComp },
+    Github: { screen: Github },
+    Cars: { screen: Cars },
+    Contact: { screen: Contact },
+    ReadMoreHomePage: { screen: ReadMoreHomePage},
 });
 
 

@@ -10,7 +10,7 @@ render() {
     <ScrollView>
       <Text style={styles.text}>
       <Image 
-        source={require('./images/bat2.jpg')}
+        source={require('../assets/images/bat2.jpg')}
         style={styles.img}
         />
 

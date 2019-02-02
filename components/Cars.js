@@ -2,14 +2,14 @@
 import React, { Component } from 'react';
 import { Image, AppRegistry, ScrollView, Text, View, StyleSheet } from 'react-native';
 
-export default class SecComp extends Component {
+export default class Cars extends Component {
 
   render() {
     return (
       <View  style = {styles.secBox}>
       <ScrollView>
       <Image 
-        source={require('./images/bat1.jpg')}
+        source={require('../assets/images/bat1.jpg')}
         style={styles.img}
 
         />
