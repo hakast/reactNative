@@ -1,5 +1,7 @@
 import React from 'react';
-import { ScrollView, TouchableOpacity, StyleSheet, Text, View, Image } from 'react-native';
+import { ScrollView, TouchableOpacity, StyleSheet, Text, View, Image, Linking } from 'react-native';
+import { SocialIcon } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class Home extends React.Component {
   render() {
@@ -39,7 +41,6 @@ export default class Home extends React.Component {
             source={require('./assets/images/twelve.jpg')}
             style={styles.imgTwelve}
           />
-          {/* <View style={styles.whitePadding}></View> */}
           <View style={{ height: 250, backgroundColor: '#E11312', marginTop: 10}} >
             <Text style={styles.varaTjanster}>VÅRA TJÄNSTER</Text>
             <Text style={styles.varaTjansterTextUnder}>Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok.</Text>          
@@ -55,9 +56,9 @@ export default class Home extends React.Component {
             <Text style={{
               marginTop: 20,
               marginLeft: 10,
-              marginBottom: 20,
-              paddingVertical: 5,
-              paddingHorizontal: 10,
+              marginBottom: 40,
+              paddingVertical: 6,
+              paddingHorizontal: 16,
               color: 'gray',
               height: 30,
               width: 100,
@@ -65,6 +66,20 @@ export default class Home extends React.Component {
               }}>Läs mer ...
             </Text>
           </TouchableOpacity>
+
+          <SocialIcon
+            onPress={() => { Linking.openURL('https://www.linkedin.com/in/haakan-aastroem/') } } 
+            title='My Linkedin'
+              button
+              type='linkedin'
+            />
+
+            <SocialIcon
+            onPress={() => { Linking.openURL('https://github.com/hakast/') } } 
+            title='My Github'
+            button
+            type='github'
+            />
 
           </View>
       </ScrollView>
@@ -88,6 +103,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#343A40',
     height: 40,
+    // zIndex: 1
   },
   menuButton: {
     color: 'white',

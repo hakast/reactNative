@@ -1,1 +1,4 @@
-This is an ongoing project in the learning phase. Trying to convert Angular1 (also on this Github) to a React native app..
+- This is an ongoing project in the learning phase. Converting Angular1 (also on this Github) to a React native app.
+- Homepage: A custom menu, one readmorebutton which links to another component.
+- Menu link Bilar: Component uses React Native elements Card. Linking from button to different websites.
+- Two icons with links to Linkedin and Github

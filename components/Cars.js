@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
-import { Image, AppRegistry, ScrollView, Text, View, StyleSheet } from 'react-native';
+import { ScrollView, Text, View, StyleSheet, Linking } from 'react-native';
+import { Card, Button } from 'react-native-elements'
 
 export default class Cars extends Component {
 
@@ -8,16 +9,72 @@ export default class Cars extends Component {
     return (
       <View  style = {styles.secBox}>
       <ScrollView>
-      <Image 
-        source={require('../assets/images/bat1.jpg')}
-        style={styles.img}
+        <Card
+          titleStyle={{color: 'gray'}}
+          imageStyle={{ alignItems: 'stretch', width: 383, height: 200 }}
+          title='LASTBIL #1'
+          image={require('../assets/images/10.jpg')}>
+          <Text style={{marginBottom: 10}}>
+          Poängen med Lorem Ipsum är att det ger ett normalt ordflöde.
+          </Text>
+          <Button
+          onPress={() => { Linking.openURL('https://www.123rf.com/photo_28092706_large-yellow-truck-isolated-on-white-background.html') } } 
+          titleStyle={{color: 'black'}}
+          icon={{name: 'star'}}
+          backgroundColor='#FFFFFF'
+          buttonStyle={{marginLeft: 0, marginRight: 0, marginBottom: 0, backgroundColor:'#FFFFFF', borderColor: '#E8E1E1', borderWidth: 1}}
+          title='Läs mer ...' />
+            
+        </Card>
 
-        />
+        <Card
+          titleStyle={{color: 'gray'}}
+          imageStyle={{ alignItems: 'stretch', width: 383, height: 200 }}
+          title='LASTBIL #2'
+          image={require('../assets/images/7.jpg')}>
+          <Text style={{marginBottom: 10}}>
+          Poängen med Lorem Ipsum är att det ger ett normalt ordflöde.
+          </Text>
+          <Button
+          onPress={() => { Linking.openURL('https://www.youtube.com/watch?v=Dxv7KRPBUcg') } } 
+          titleStyle={{color: 'black'}}
+          icon={{name: 'star'}}
+          buttonStyle={{marginLeft: 0, marginRight: 0, marginBottom: 0, backgroundColor:'#FFFFFF', borderColor: '#E8E1E1', borderWidth: 1}}
+          title='Läs mer ...' />
+        </Card>
 
-        <Text style={styles.text}>
-          Komponent 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est 
+        <Card  
+          titleStyle={{color: 'gray'}}
+          imageStyle={{ alignItems: 'stretch', width: 383, height: 200 }}
+          title='LASTBIL #3'
+          image={require('../assets/images/5.jpg')}>
+          <Text style={{marginBottom: 10}}>
+          Poängen med Lorem Ipsum är att det ger ett normalt ordflöde.
+          </Text>
+          <Button
+          onPress={() => { Linking.openURL('https://www.videoblocks.com/video/convoy-of-white-trucks-semi-trailer-on-the-road-highway-transports-logistics-concept-4k-realistic-animation-rvrc3brlfjdjegbnb') } } 
+          titleStyle={{color: 'black'}}
+          icon={{name: 'star'}}
+          buttonStyle={{marginLeft: 0, marginRight: 0, marginBottom: 0, backgroundColor:'#FFFFFF', borderColor: '#E8E1E1', borderWidth: 1}}
+          title='Läs mer ...' />
+        </Card>
 
-        </Text>
+        <Card
+          titleStyle={{color: 'gray'}}
+          imageStyle={{ alignItems: 'stretch', width: 383, height: 200 }}
+          title='LASTBIL #4'
+          image={require('../assets/images/9.jpg')}>
+          <Text style={{marginBottom: 10}}>
+          Poängen med Lorem Ipsum är att det ger ett normalt ordflöde.
+          </Text>
+          <Button
+          onPress={() => { Linking.openURL('http://www.redtrucktahoe.com/') } } 
+          titleStyle={{color: 'black'}}
+          icon={{name: 'star'}}
+          buttonStyle={{marginLeft: 0, marginRight: 0, marginBottom: 0, backgroundColor:'#FFFFFF', borderColor: '#E8E1E1', borderWidth: 1}}
+          title='Läs mer ...' />
+        </Card>
+
       </ScrollView>
         <View />    
       </View>
@@ -27,21 +84,12 @@ export default class Cars extends Component {
 }
 
 const styles = StyleSheet.create ({
-  secBox: {
-  height: 1000,
-//   backgroundColor: '#EFF0F1',
-  marginBottom: 10,
-  borderRadius: 10
-  },
-  text: {
-    padding: 10,
-  },
-  img: {
-    alignItems: 'stretch',
-    width: 400,
-    height: 200
-  }
+  // img: {
+  //   alignItems: 'stretch',
+  //   width: 400,
+  //   height: 200
+  // }
+
   })
   
 
-AppRegistry.registerComponent('AwesomeProject', () => SecComp);
