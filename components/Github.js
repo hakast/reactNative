@@ -1,8 +1,8 @@
 
 import React, { Component } from 'react';
 import axios from 'axios';
-import { ScrollView, Text, Linking, Image, View, StyleSheet, TextInput } from 'react-native';
-import { Card, List, Button, Icon, ListItem, FlatList, withTheme } from 'react-native-elements';
+import { ScrollView, ListView, Text, Linking, Image, View, StyleSheet, TextInput } from 'react-native';
+import { Card, Divider, Icon, SocialIcon, Button, } from 'react-native-elements';
 
 export default class Github extends Component {
   constructor(props) {
@@ -13,7 +13,6 @@ export default class Github extends Component {
   }
 
     componentDidMount() {
-      console.log('nisse')
       axios.get('https://api.github.com/users')
         .then(res => {
           const persons = res.data;
@@ -26,52 +25,49 @@ export default class Github extends Component {
   
   render() {
         return (
-        <View style={styles.container}> 
-          <Card title="DYNAMISKT GENERERADE GITHUBANVÄNDARE">
+        <ScrollView contentContainerStyle={styles.contentContainer}>
+          <Card title="INTRESSANTA GITHUBKONTON"
+            titleStyle={{color: 'gray', paddingTop: 10, paddingBottom: 10,}}
+          >
             {
               this.state.persons.map((person, i) => {
                 return (
-                  <View key={i} style={styles.user}>
-                  <ScrollView>
+                  <View key={i}>
                   <Text style={styles.login}>{person.login}</Text>
-
                     <Image
-                      // imageStyle={{ alignItems: 'stretch', }}
                       style={styles.image}
                       resizeMode="cover"
                       source={{ uri: person.avatar_url }}
                     />
                     <Button
                       onPress={() => { Linking.openURL(person.html_url) } } 
-                      titleStyle={{color: 'white'}}
+                      titleStyle={{color: 'gray'}}
                       // icon={{name: 'star'}}
                       buttonStyle={{
                         marginLeft: 0, 
                         marginRight: 0, 
-                        marginBottom: 20, 
-                        marginTop: 20,
-                        backgroundColor:'#343A40', 
-                        borderColor: '#E8E1E1', borderWidth: 1}}
+                        marginBottom: 25, 
+                        marginTop: 15,
+                        backgroundColor:'white', 
+                        borderColor: '#E8E1E1', borderWidth: 2}}
                       title='Öppna Github ...' />
-
-
-                    </ScrollView>
                   </View>
                 );
               })
             }
           </Card>
 
-          </View>    
+          </ScrollView>
+
       );
     }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    backgroundColor: '#E8E1E1',
+  contentContainer: {
+    marginVertical: 5,
+    alignItems: 'stretch',
+    backgroundColor: '#3E3E3E'
   },
   image: {
     height: 200,
@@ -80,6 +76,10 @@ const styles = StyleSheet.create({
     // margin: 20,
   },
   login: {
-    alignItems: 'center',
+    textAlign: 'center',
+    color: 'gray',
+    paddingBottom: 15,
+    fontSize: 20,
+    textTransform: 'uppercase',
   }
   });
