@@ -41,7 +41,7 @@ export default class Home extends React.Component {
             source={require('./assets/images/twelve.jpg')}
             style={styles.imgTwelve}
           />
-          <View style={{ height: 250, backgroundColor: '#E11312', marginTop: 10}} >
+          <View style={{ height: 250, backgroundColor: '#0077B5', marginTop: 5}} >
             <Text style={styles.varaTjanster}>VÅRA TJÄNSTER</Text>
             <Text style={styles.varaTjansterTextUnder}>Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok.</Text>          
             <Image 
@@ -69,14 +69,14 @@ export default class Home extends React.Component {
 
           <SocialIcon
             onPress={() => { Linking.openURL('https://www.linkedin.com/in/haakan-aastroem/') } } 
-            title='My Linkedin'
+            title='Linkedin'
               button
               type='linkedin'
             />
 
             <SocialIcon
             onPress={() => { Linking.openURL('https://github.com/hakast/') } } 
-            title='My Github'
+            title='Github'
             button
             type='github'
             />
@@ -92,6 +92,7 @@ export default class Home extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#343A40'
   },
   contentContainer: {
     marginVertical: 5,
@@ -102,13 +103,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     backgroundColor: '#343A40',
-    height: 40,
+    height: 35,
     // zIndex: 1
   },
   menuButton: {
     color: 'white',
     paddingHorizontal: 10,
-    marginVertical: 5
+    marginTop: 6
   },
   imgTwelve: {
     height: 150,

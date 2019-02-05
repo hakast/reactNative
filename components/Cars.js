@@ -7,7 +7,7 @@ export default class Cars extends Component {
 
   render() {
     return (
-      <View  style = {styles.secBox}>
+      <View  style = {styles.component}>
       <ScrollView>
         <Card
           titleStyle={{color: 'gray'}}
@@ -84,12 +84,9 @@ export default class Cars extends Component {
 }
 
 const styles = StyleSheet.create ({
-  // img: {
-  //   alignItems: 'stretch',
-  //   width: 400,
-  //   height: 200
-  // }
-
+  component: {
+    // backgroundColor: '#3E3E3E'
+  }
   })
   
 

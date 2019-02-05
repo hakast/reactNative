@@ -1,29 +1,69 @@
 
 import React, { Component } from 'react';
-import { Image, AppRegistry, ScrollView, Text, View, StyleSheet } from 'react-native';
-
+import { AppRegistry, ScrollView, Text, View, StyleSheet } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import { Input } from 'react-native-elements';
 export default class ThirdComp extends Component {
 
 render() {
   return (
-    <View  style = {styles.thirdBox}>
-    <ScrollView>
-      <Text style={styles.text}>
-      <Image 
-        source={require('../assets/images/bat2.jpg')}
-        style={styles.img}
+    <View  style = {styles.component}>
+      <ScrollView>
+      <View style={{}}>
+        <Input
+          placeholder='KONTAKT'
+          placeholderTextColor='white'
+          containerStyle={{borderWidth: 8, }}
         />
-
-          Komponent 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est 
-          laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          Komponent 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est 
-          laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          Komponent 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est 
-          laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          Komponent 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est 
-          laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-          </Text>
+      </View>
+        <Input       
+          containerStyle={{borderWidth: 8, }}
+          inputStyle={{color: 'white'}}
+          style={styles.input}
+          placeholderTextColor='gray'
+          placeholder='Förnamn'
+          leftIcon={
+            <View style={{marginRight: 22}}>
+              <Icon
+                name='user'
+                size={24}
+                color='white'
+              />
+            </View>
+          }
+        />
+        <Input
+          containerStyle={{borderWidth: 8, }}
+          inputStyle={{color: 'white'}}
+          style={styles.input}
+          placeholderTextColor='gray'
+          placeholder='Efternamn'
+          leftIcon={
+            <View style={{marginRight: 28}}>
+              <Icon
+                name='male'
+                size={24}
+                color='white'
+              />
+            </View>
+          }
+        />
+        <Input
+          containerStyle={{borderWidth: 8, }}
+          inputStyle={{color: 'white'}}
+          style={styles.input}
+          placeholderTextColor='gray'
+          placeholder='Mailadress'
+          leftIcon={
+            <View style={{marginRight: 20}}>
+              <Icon
+                name='envelope'
+                size={24}
+                color='white'
+              />
+            </View>
+          }
+        />
       </ScrollView>
       <View />    
     </View>
@@ -33,20 +73,10 @@ render() {
 }
 
 const styles = StyleSheet.create ({
-thirdBox: {
-height: 800,
-// backgroundColor: '#EFF0F1',
-marginBottom: 10,
-borderRadius: 10
+component: {
+  flex: 1,
+  backgroundColor: '#30343A'
 },
-text: {
-  padding: 10,
-},
-img: {
-  alignItems: 'stretch',
-  width: 400,
-  height: 200
-}
 })
   
 
