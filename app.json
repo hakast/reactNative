@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "NavApp",
-    "slug": "nav-app",
+    "name": "react_native_01",
+    "slug": "react_native_01",
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": [
@@ -24,6 +24,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "",
+    "githubUrl": "https://github.com/hakast/reactNative"
   }
 }
