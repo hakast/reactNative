@@ -11,11 +11,14 @@ export default class Cars extends Component {
       <ScrollView>
         <Card
           titleStyle={{color: 'gray'}}
-          imageStyle={{ alignItems: 'stretch', width: 383, height: 200 }}
+          imageStyle={{ 
+            marginLeft: 10,  
+            marginRight: 10,
+            height: 200 }}
           title='LASTBIL #1'
           image={require('../assets/images/10.jpg')}>
           <Text style={{marginBottom: 10}}>
-          Poängen med Lorem Ipsum är att det ger ett normalt ordflöde.
+          Poängen med Lorem Ipsum är att det ger ett normalt ordflöde. Poängen med Lorem Ipsum är att det ger ett normalt ordflöde.
           </Text>
           <Button
           onPress={() => { Linking.openURL('https://www.123rf.com/photo_28092706_large-yellow-truck-isolated-on-white-background.html') } } 
@@ -29,11 +32,14 @@ export default class Cars extends Component {
 
         <Card
           titleStyle={{color: 'gray'}}
-          imageStyle={{ alignItems: 'stretch', width: 383, height: 200 }}
+          imageStyle={{ 
+            marginLeft: 10,  
+            marginRight: 10,
+            height: 200 }}
           title='LASTBIL #2'
           image={require('../assets/images/7.jpg')}>
           <Text style={{marginBottom: 10}}>
-          Poängen med Lorem Ipsum är att det ger ett normalt ordflöde.
+          Poängen med Lorem Ipsum är att det ger ett normalt ordflöde. Poängen med Lorem Ipsum är att det ger ett normalt ordflöde.
           </Text>
           <Button
           onPress={() => { Linking.openURL('https://www.youtube.com/watch?v=Dxv7KRPBUcg') } } 
@@ -45,11 +51,14 @@ export default class Cars extends Component {
 
         <Card  
           titleStyle={{color: 'gray'}}
-          imageStyle={{ alignItems: 'stretch', width: 383, height: 200 }}
+          imageStyle={{ 
+            marginLeft: 10,  
+            marginRight: 10,
+            height: 200 }}
           title='LASTBIL #3'
           image={require('../assets/images/5.jpg')}>
           <Text style={{marginBottom: 10}}>
-          Poängen med Lorem Ipsum är att det ger ett normalt ordflöde.
+          Poängen med Lorem Ipsum är att det ger ett normalt ordflöde. Poängen med Lorem Ipsum är att det ger ett normalt ordflöde.
           </Text>
           <Button
           onPress={() => { Linking.openURL('https://www.videoblocks.com/video/convoy-of-white-trucks-semi-trailer-on-the-road-highway-transports-logistics-concept-4k-realistic-animation-rvrc3brlfjdjegbnb') } } 
@@ -61,11 +70,14 @@ export default class Cars extends Component {
 
         <Card
           titleStyle={{color: 'gray'}}
-          imageStyle={{ alignItems: 'stretch', width: 383, height: 200 }}
+          imageStyle={{ 
+            marginLeft: 10,  
+            marginRight: 10,
+            height: 200 }}
           title='LASTBIL #4'
           image={require('../assets/images/9.jpg')}>
           <Text style={{marginBottom: 10}}>
-          Poängen med Lorem Ipsum är att det ger ett normalt ordflöde.
+          Poängen med Lorem Ipsum är att det ger ett normalt ordflöde. Poängen med Lorem Ipsum är att det ger ett normalt ordflöde.
           </Text>
           <Button
           onPress={() => { Linking.openURL('http://www.redtrucktahoe.com/') } } 
@@ -85,7 +97,7 @@ export default class Cars extends Component {
 
 const styles = StyleSheet.create ({
   component: {
-    // backgroundColor: '#3E3E3E'
+    backgroundColor: '#EAE5E5',
   }
   })
   

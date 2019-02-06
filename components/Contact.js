@@ -80,4 +80,3 @@ component: {
 })
   
 
-AppRegistry.registerComponent('AwesomeProject', () => ThirdComp);

@@ -1,7 +1,6 @@
 import React from 'react';
 import { ScrollView, TouchableOpacity, StyleSheet, Text, View, Image, Linking } from 'react-native';
 import { SocialIcon } from 'react-native-elements';
-import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class Home extends React.Component {
   render() {
@@ -37,6 +36,10 @@ export default class Home extends React.Component {
         {/* NAVIGATION END */}
 
       <ScrollView contentContainerStyle={styles.contentContainer}>
+            <View>
+              <Text style={styles.welcomeText}>Välkommen!
+              </Text>
+            </View>
           <Image 
             source={require('./assets/images/twelve.jpg')}
             style={styles.imgTwelve}
@@ -68,6 +71,11 @@ export default class Home extends React.Component {
           </TouchableOpacity>
 
           <SocialIcon
+            style={{
+              width: 150,
+              marginLeft: 28,
+              marginTop: 20,
+            }}
             onPress={() => { Linking.openURL('https://www.linkedin.com/in/haakan-aastroem/') } } 
             title='Linkedin'
               button
@@ -75,6 +83,11 @@ export default class Home extends React.Component {
             />
 
             <SocialIcon
+            style={{
+              width: 150,
+              marginLeft: 230,
+              marginTop: -60,
+            }}
             onPress={() => { Linking.openURL('https://github.com/hakast/') } } 
             title='Github'
             button
@@ -92,11 +105,19 @@ export default class Home extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#343A40'
   },
   contentContainer: {
     marginVertical: 5,
     alignItems: 'stretch'
+  },
+  welcomeText: {
+    fontSize: 30,
+    color: 'black',
+    marginBottom: 30,
+    marginTop: 30,
+    textAlign: 'center',
+    letterSpacing: 3,
+    fontWeight: '100',
   },
   menu: {
     alignItems: 'baseline',
@@ -104,12 +125,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#343A40',
     height: 35,
-    // zIndex: 1
   },
   menuButton: {
     color: 'white',
     paddingHorizontal: 10,
-    marginTop: 6
+    marginTop: 5,
   },
   imgTwelve: {
     height: 150,

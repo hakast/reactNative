@@ -1,8 +1,8 @@
 
 import React, { Component } from 'react';
 import axios from 'axios';
-import { ScrollView, ListView, Text, Linking, Image, View, StyleSheet, TextInput } from 'react-native';
-import { Card, Divider, Icon, SocialIcon, Button, } from 'react-native-elements';
+import { ScrollView, Text, Linking, Image, View, StyleSheet } from 'react-native';
+import { Card, Button, } from 'react-native-elements';
 
 export default class Github extends Component {
   constructor(props) {
@@ -27,13 +27,40 @@ export default class Github extends Component {
         return (
         <ScrollView contentContainerStyle={styles.contentContainer}>
           <Card title="INTRESSANTA GITHUBKONTON"
-            titleStyle={{color: 'gray', paddingTop: 10, paddingBottom: 10,}}
+            titleStyle={{
+              color: 'gray', 
+              paddingTop: 10, 
+              paddingBottom: 10,
+            }}
           >
             {
               this.state.persons.map((person, i) => {
                 return (
                   <View key={i}>
+
+                  {/* LINE ABOVE LOGIN NAME */}
+                    <View
+                        style={{
+                          borderBottomColor: '#E8E1E1',
+                          borderBottomWidth: 1,
+                          marginBottom: 3,
+                        }}
+                      >   
+                    </View> 
+
+                    {/* LOGIN NAME */}
                   <Text style={styles.login}>{person.login}</Text>
+                    
+                    {/* LINE BELOW LOGIN NAME */}                 
+                  <View
+                        style={{
+                          borderBottomColor: '#E8E1E1',
+                          borderBottomWidth: 1,
+                          marginBottom: 20,
+                        }}
+                      >   
+                    </View>  
+
                     <Image
                       style={styles.image}
                       resizeMode="cover"
@@ -42,7 +69,6 @@ export default class Github extends Component {
                     <Button
                       onPress={() => { Linking.openURL(person.html_url) } } 
                       titleStyle={{color: 'gray'}}
-                      // icon={{name: 'star'}}
                       buttonStyle={{
                         marginLeft: 0, 
                         marginRight: 0, 
@@ -50,15 +76,13 @@ export default class Github extends Component {
                         marginTop: 15,
                         backgroundColor:'white', 
                         borderColor: '#E8E1E1', borderWidth: 2}}
-                      title='Öppna Github ...' />
+                      title='Se Githubkonto!' />
                   </View>
                 );
               })
             }
           </Card>
-
           </ScrollView>
-
       );
     }
 }
@@ -67,18 +91,21 @@ const styles = StyleSheet.create({
   contentContainer: {
     marginVertical: 5,
     alignItems: 'stretch',
-    backgroundColor: '#3E3E3E'
+    backgroundColor: '#EAE5E5',
+    // flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   image: {
     height: 200,
-    width: 350,
     borderRadius: 10,
-    // margin: 20,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   login: {
     textAlign: 'center',
     color: 'gray',
-    paddingBottom: 15,
+    padding: 5,
     fontSize: 20,
     textTransform: 'uppercase',
   }
