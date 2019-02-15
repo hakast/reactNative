@@ -25,7 +25,7 @@
     "ios": {
       "supportsTablet": true
     },
-    "description": "",
+    "description": "Mobile app built with React Native",
     "githubUrl": "https://github.com/hakast/reactNative"
   }
 }
