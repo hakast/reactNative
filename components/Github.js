@@ -2,7 +2,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { ScrollView, Text, Linking, Image, View, StyleSheet } from 'react-native';
-import { Card, Button, } from 'react-native-elements';
+import { Card, Button, Header } from 'react-native-elements';
+import Menu from './Menu';
+import HeaderComp from './Header';
 
 export default class Github extends Component {
   constructor(props) {
@@ -25,7 +27,36 @@ export default class Github extends Component {
   
   render() {
         return (
+        <View>
+          <HeaderComp navigation={this.props.navigation} />      
+          <Menu navigation={this.props.navigation} />
+
+          {/* <Header
+              containerStyle={{
+                backgroundColor: '#343A40', 
+                marginTop: -40
+                }}       
+              leftComponent={{ 
+                icon: 'menu', 
+                color: '#fff',  
+                onPress: () => this.props.navigation.navigate('Cars')
+
+              }}
+              centerComponent={{ 
+                text: 'MOBILE APP', 
+                style: { color: '#fff' } 
+              }}
+              rightComponent={{ 
+                icon: 'home', 
+                color: '#fff', 
+                onPress: () => this.props.navigation.navigate('Home')
+
+              }}
+                
+          /> */}
+
         <ScrollView contentContainerStyle={styles.contentContainer}>
+
           <Card title="INTRESSANTA GITHUBKONTON"
             titleStyle={{
               color: 'gray', 
@@ -83,13 +114,14 @@ export default class Github extends Component {
             }
           </Card>
           </ScrollView>
+          </View>
       );
     }
 }
 
 const styles = StyleSheet.create({
   contentContainer: {
-    marginVertical: 5,
+    marginVertical: 35,
     alignItems: 'stretch',
     backgroundColor: '#EAE5E5',
     // flex: 1,

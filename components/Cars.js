@@ -2,12 +2,14 @@
 import React, { Component } from 'react';
 import { ScrollView, Text, View, StyleSheet, Linking } from 'react-native';
 import { Card, Button } from 'react-native-elements'
+import Menu from './Menu';
 
 export default class Cars extends Component {
-
   render() {
     return (
       <View  style = {styles.component}>
+          <Menu navigation={this.props.navigation} />
+
       <ScrollView>
         <Card
           titleStyle={{color: 'gray'}}

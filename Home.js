@@ -1,39 +1,29 @@
 import React from 'react';
 import { ScrollView, TouchableOpacity, StyleSheet, Text, View, Image, Linking } from 'react-native';
-import { SocialIcon } from 'react-native-elements';
+import { SocialIcon,  } from 'react-native-elements';
+import Menu from './components/Menu';
+import HeaderComp from './components/Header';
 
 export default class Home extends React.Component {
+  constructor(){
+    super()
+    this.state = {
+      isHidden: false
+    }
+    // this.toggleHidden = this.toggleHidden.bind(this)
+  }
+
   render() {
+      toggleHidden = () => {
+      console.log('test')
+      // this.setState({isHidden: !this.state.isHidden})
+    }
+  
     return (
       <View style={styles.container}>
-        {/* NAVIGATION START */}  
-        <View style={styles.menu} >
-          <TouchableOpacity             
-            onPress={() =>
-                this.props.navigation.navigate('Github')
-            }
-            >
-            <Text style={styles.menuButton}>Github</Text>
-          </TouchableOpacity>
 
-          <TouchableOpacity 
-            onPress={() =>
-                this.props.navigation.navigate('Cars')
-            }
-            >
-            <Text style={styles.menuButton}>Bilar</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={styles.menuButton} 
-            onPress={() =>
-                this.props.navigation.navigate('Contact')
-            }
-            >
-            <Text style={styles.menuButton}>Kontakt</Text>
-          </TouchableOpacity>
-        </View>
-        {/* NAVIGATION END */}
+      <HeaderComp navigation={this.props.navigation} />      
+      <Menu navigation={this.props.navigation} />
 
       <ScrollView contentContainerStyle={styles.contentContainer}>
             <View>
@@ -44,7 +34,7 @@ export default class Home extends React.Component {
             source={require('./assets/images/twelve.jpg')}
             style={styles.imgTwelve}
           />
-          <View style={{ height: 250, backgroundColor: '#0077B5', marginTop: 5}} >
+          <View style={{ height: 280, backgroundColor: '#0077B5', marginTop: 5}} >
             <Text style={styles.varaTjanster}>VÅRA TJÄNSTER</Text>
             <Text style={styles.varaTjansterTextUnder}>Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok.</Text>          
             <Image 
@@ -110,6 +100,9 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     alignItems: 'stretch'
   },
+  header: {
+    backgroundColor: '#343A40',
+  },
   welcomeText: {
     fontSize: 30,
     color: 'black',
@@ -125,6 +118,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#343A40',
     height: 35,
+    
   },
   menuButton: {
     color: 'white',
@@ -145,10 +139,10 @@ const styles = StyleSheet.create({
     color: 'white',
     paddingTop: 20,
     paddingLeft: 10,
-    width: 250,
+    width: 220,
   },
   imgGrayTruck: {
-    height: 250,
+    height: 280,
     width: 150,
     position: 'absolute',
     top: 0,

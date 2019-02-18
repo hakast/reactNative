@@ -4,12 +4,13 @@ import { ScrollView, TextInput, View, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Input } from 'react-native-elements';
 import{ MapView } from 'expo';
-
+import Menu from './Menu';
 export default class ThirdComp extends Component {
 
 render() {
   return (
     <View  style = {styles.component}>
+    <Menu />
       <ScrollView>
       <View style={{}}>
         <Input
