@@ -1,10 +1,9 @@
-
-import React, { Component } from 'react';
-import { ScrollView, Text, Linking, Image, View, StyleSheet } from 'react-native';
-import { Card, Button, Header } from 'react-native-elements';
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
+import { Header } from 'react-native-elements';
 
 export default class HeaderComp extends React.Component {
-  
+
   render() {
         return (
         <View>
@@ -16,11 +15,11 @@ export default class HeaderComp extends React.Component {
               leftComponent={{ 
                 icon: 'menu', 
                 color: '#fff',  
-                onPress: () => this.props.navigation.navigate('Cars')
+                onPress: () => {toggleHidden()}
 
               }}
               centerComponent={{ 
-                text: 'MOBILE APP', 
+                text: 'TRUCK ON DEMAND', 
                 style: { color: '#fff' } 
               }}
               rightComponent={{ 
@@ -31,7 +30,6 @@ export default class HeaderComp extends React.Component {
               }}
                 
           />
-
           </View>
       );
     }
@@ -42,7 +40,6 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     alignItems: 'stretch',
     backgroundColor: '#EAE5E5',
-    // flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
   },

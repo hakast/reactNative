@@ -3,12 +3,32 @@ import React, { Component } from 'react';
 import { ScrollView, Text, View, StyleSheet, Linking } from 'react-native';
 import { Card, Button } from 'react-native-elements'
 import Menu from './Menu';
+import HeaderComp from './Header';
 
 export default class Cars extends Component {
+  constructor(){
+    super()
+    this.state = {
+      isHidden: true
+    }
+  }
+
   render() {
+    toggleHidden = () => {
+      this.setState({isHidden: !this.state.isHidden})
+      if(this.state.isHidden) {
+        console.log('true')
+      }
+      else {console.log('false')}
+    }
+
     return (
       <View  style = {styles.component}>
-          <Menu navigation={this.props.navigation} />
+
+      {/* RENDERING HEADER AND MENU COMPONENTS */}
+      <HeaderComp navigation={this.props.navigation} /> 
+      {!this.state.isHidden && 
+      <Menu navigation={this.props.navigation} />}
 
       <ScrollView>
         <Card

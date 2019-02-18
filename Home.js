@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollView, TouchableOpacity, StyleSheet, Text, View, Image, Linking } from 'react-native';
-import { SocialIcon,  } from 'react-native-elements';
+import { SocialIcon } from 'react-native-elements';
 import Menu from './components/Menu';
 import HeaderComp from './components/Header';
 
@@ -8,23 +8,28 @@ export default class Home extends React.Component {
   constructor(){
     super()
     this.state = {
-      isHidden: false
+      isHidden: true
     }
-    // this.toggleHidden = this.toggleHidden.bind(this)
   }
 
-  render() {
-      toggleHidden = () => {
-      console.log('test')
-      // this.setState({isHidden: !this.state.isHidden})
+  render() { 
+    toggleHidden = () => {
+      this.setState({isHidden: !this.state.isHidden})
+      if(this.state.isHidden) {
+        console.log('true')
+      }
+      else {console.log('false')}
     }
-  
+
     return (
       <View style={styles.container}>
 
-      <HeaderComp navigation={this.props.navigation} />      
-      <Menu navigation={this.props.navigation} />
+      {/* RENDERING HEADER AND MENU COMPONENTS */}
+      <HeaderComp navigation={this.props.navigation} /> 
+      {!this.state.isHidden && 
+      <Menu navigation={this.props.navigation} />}
 
+      {/* SCROLLVIEW BELOW  */}
       <ScrollView contentContainerStyle={styles.contentContainer}>
             <View>
               <Text style={styles.welcomeText}>Välkommen!

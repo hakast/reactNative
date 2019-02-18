@@ -10,7 +10,8 @@ export default class Github extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      persons: []
+      persons: [],
+      isHidden: true
     }
   }
 
@@ -26,34 +27,21 @@ export default class Github extends Component {
       }
   
   render() {
+    toggleHidden = () => {
+      this.setState({isHidden: !this.state.isHidden})
+      if(this.state.isHidden) {
+        console.log('true')
+      }
+      else {console.log('false')}
+    }
+
         return (
         <View>
-          <HeaderComp navigation={this.props.navigation} />      
-          <Menu navigation={this.props.navigation} />
+          {/* RENDERING HEADER AND MENU COMPONENTS */}
+          <HeaderComp navigation={this.props.navigation} /> 
+          {!this.state.isHidden && 
+          <Menu navigation={this.props.navigation} />}
 
-          {/* <Header
-              containerStyle={{
-                backgroundColor: '#343A40', 
-                marginTop: -40
-                }}       
-              leftComponent={{ 
-                icon: 'menu', 
-                color: '#fff',  
-                onPress: () => this.props.navigation.navigate('Cars')
-
-              }}
-              centerComponent={{ 
-                text: 'MOBILE APP', 
-                style: { color: '#fff' } 
-              }}
-              rightComponent={{ 
-                icon: 'home', 
-                color: '#fff', 
-                onPress: () => this.props.navigation.navigate('Home')
-
-              }}
-                
-          /> */}
 
         <ScrollView contentContainerStyle={styles.contentContainer}>
 

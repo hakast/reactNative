@@ -3,18 +3,10 @@ import { ScrollView, TouchableOpacity, StyleSheet, Text, View, Image, Linking } 
 import { SocialIcon, Header } from 'react-native-elements';
 
 export default class Menu extends React.Component {
-  constructor(){
-    super()
-    // this.state = {
-    //   isHidden: false
-    // }
-    // this.toggleHidden = this.toggleHidden.bind(this)
-  }
-
   render() {
     
     return (
-      <View style={styles.container}>
+      <View>
 
         {/* NAVIGATION START */}  
         <View style={styles.menu} 
@@ -43,17 +35,12 @@ export default class Menu extends React.Component {
           </TouchableOpacity>
         </View>
         {/* NAVIGATION END */}
-
-
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   header: {
     backgroundColor: '#343A40',
   },
