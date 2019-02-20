@@ -1,7 +1,11 @@
 Converted Angular1 (also on this Github) to a React native app.
-Constructed in Expo iOS simulator iPhone XR - 12.1 and refactored to look okay in other devices too. It's possible I overlooked some of them ...
+Constructed in Expo iOS simulator, looks perfect in at least iPhone XR - 12.1 ...
 
 Project published and uploaded to Expo.
+
+Menu:
+* Header with hamburgermenu, a center text element and a Homebutton.
+* When click on hamburger, menu toggle depending on if isHidden is true/false.
 
 Homepage: 
 * A custom menu, one readmorebutton which links to a component.

@@ -13,6 +13,11 @@ export default class Menu extends React.Component {
         isHidden={false}
         >
           <TouchableOpacity             
+            onPress={() => this.props.navigation.navigate('Home') } >
+            <Text style={styles.menuButton}>Hem</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity             
             onPress={() => this.props.navigation.navigate('Github') } >
             <Text style={styles.menuButton}>Github</Text>
           </TouchableOpacity>
@@ -57,4 +62,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     marginTop: 5,
   },
+  
 });

@@ -109,7 +109,7 @@ export default class Github extends Component {
 
 const styles = StyleSheet.create({
   contentContainer: {
-    marginVertical: 35,
+    marginVertical: 0,
     alignItems: 'stretch',
     backgroundColor: '#EAE5E5',
     // flex: 1,

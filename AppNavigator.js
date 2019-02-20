@@ -2,13 +2,13 @@ import {
     createAppContainer,
     createStackNavigator } from 'react-navigation';
 
-
 import Home from './Home';
 import Github from './components/Github';
 import Cars from './components/Cars';
 import Contact from './components/Contact';
 import ReadMoreHomePage from './components/ReadMoreHomePage';
 import Menu from './components/Menu';
+import Login from './login/Login';
 
 const AppNavigator = createStackNavigator({
     Home: { screen: Home },
@@ -17,6 +17,7 @@ const AppNavigator = createStackNavigator({
     Contact: { screen: Contact },
     ReadMoreHomePage: { screen: ReadMoreHomePage },
     Menu: { screen: Menu },
+    Login: { screen: Login },
 });
 
 

@@ -18,9 +18,15 @@ export default class HeaderComp extends React.Component {
                 onPress: () => {toggleHidden()}
 
               }}
+              // centerComponent={{ 
+              //   text: 'TRUCK ON DEMAND', 
+              //   style: { color: '#fff' } 
+              // }}
               centerComponent={{ 
-                text: 'TRUCK ON DEMAND', 
-                style: { color: '#fff' } 
+                text: 'LOGIN',
+              //   icon: 'login', 
+                style: {color: '#fff'},  
+                onPress: () => this.props.navigation.navigate('Login')
               }}
               rightComponent={{ 
                 icon: 'home', 

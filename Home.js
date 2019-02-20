@@ -32,7 +32,7 @@ export default class Home extends React.Component {
       {/* SCROLLVIEW BELOW  */}
       <ScrollView contentContainerStyle={styles.contentContainer}>
             <View>
-              <Text style={styles.welcomeText}>Välkommen!
+              <Text style={styles.welcomeText}>TRUCKS ON DEMAND!
               </Text>
             </View>
           <Image 
@@ -109,12 +109,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#343A40',
   },
   welcomeText: {
-    fontSize: 30,
+    fontSize: 20,
     color: 'black',
     marginBottom: 30,
     marginTop: 30,
     textAlign: 'center',
-    letterSpacing: 3,
+    letterSpacing: 2,
     fontWeight: '100',
   },
   menu: {
