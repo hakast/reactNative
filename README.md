@@ -23,3 +23,5 @@ Bilar:
 Contact:
 * Input fields from react-native-elements
 * Map imported from expo
+* Contact details goes to phpmyadmin db. I used PHP and Axios to accompish that. Working on localhost so far.
+* See database sql code in the tree.

@@ -1,7 +1,9 @@
 
 import React, { Component } from 'react';
 import axios from 'axios';
-// import {querystring} from 'querystring';
+
+// qs IS FANTASTIC. MAKE A WONDER WHEN STRINGIFY POST USING PHP
+import qs from 'qs';
 
 import { 
   Text,
@@ -35,7 +37,7 @@ export default class Contact extends Component {
     const { fname, lname, mail, msg } = this.state;
     Alert.alert('Dina uppgifter:', `${fname} ${lname} ${mail} ${msg}`);
     
-    var data =  JSON.stringify({
+    var data =  qs.stringify({
       fname: this.state.fname,
       lname: this.state.lname,
       mail: this.state.mail,
@@ -54,8 +56,6 @@ export default class Contact extends Component {
   
     }
   
-  
-
 render() {
   toggleHidden = () => {
     this.setState({isHidden: !this.state.isHidden})
