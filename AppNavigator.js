@@ -8,7 +8,8 @@ import Cars from './components/Cars';
 import Contact from './components/Contact';
 import ReadMoreHomePage from './components/ReadMoreHomePage';
 import Menu from './components/Menu';
-import Login from './login/Login';
+import Login from './admin/Login';
+import AfterLogin from './admin/AfterLogin';
 
 const AppNavigator = createStackNavigator({
     Home: { screen: Home },
@@ -18,11 +19,9 @@ const AppNavigator = createStackNavigator({
     ReadMoreHomePage: { screen: ReadMoreHomePage },
     Menu: { screen: Menu },
     Login: { screen: Login },
+    AfterLogin: { screen: AfterLogin },
 });
 
-
-
 const AppContainer = createAppContainer(AppNavigator);
-
 
 export default AppContainer;

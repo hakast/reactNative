@@ -8,6 +8,8 @@ class _user extends Resource{ // Klassen ärver egenskaper från den generella k
 	$lname,
 	$mail,
 	$msg,
+	$username,
+	$password,
 	$id,
 	$users,
 	$request;
@@ -74,7 +76,9 @@ class _user extends Resource{ // Klassen ärver egenskaper från den generella k
 		$lname = mysqli_real_escape_string($db, $input['lname']);
 		$mail = mysqli_real_escape_string($db, $input['mail']);
 		$msg = mysqli_real_escape_string($db, $input['msg']);
-		$query = "INSERT INTO users (fname, lname, mail, msg) VALUES ('$fname','$lname', '$mail', '$msg')";
+		$username = mysqli_real_escape_string($db, $input['username']);
+		$password = mysqli_real_escape_string($db, $input['password']);
+		$query = "INSERT INTO users (fname, lname, mail, msg, username, password) VALUES ('$fname','$lname', '$mail', '$msg', '$username', '$password')";
 		mysqli_query($db, $query);
 	}
 	# Denna funktion körs om vi anropat resursen genom HTTP-metoden PUT

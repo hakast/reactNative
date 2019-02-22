@@ -1,8 +1,6 @@
 
 import React, { Component } from 'react';
 import axios from 'axios';
-
-// qs IS FANTASTIC. MAKE A WONDER WHEN STRINGIFY POST USING PHP
 import qs from 'qs';
 
 import { 

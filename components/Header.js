@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 import { Header } from 'react-native-elements';
 
 export default class HeaderComp extends React.Component {
@@ -18,13 +18,8 @@ export default class HeaderComp extends React.Component {
                 onPress: () => {toggleHidden()}
 
               }}
-              // centerComponent={{ 
-              //   text: 'TRUCK ON DEMAND', 
-              //   style: { color: '#fff' } 
-              // }}
               centerComponent={{ 
                 text: 'LOGIN',
-              //   icon: 'login', 
                 style: {color: '#fff'},  
                 onPress: () => this.props.navigation.navigate('Login')
               }}
@@ -33,33 +28,32 @@ export default class HeaderComp extends React.Component {
                 color: '#fff', 
                 onPress: () => this.props.navigation.navigate('Home')
 
-              }}
-                
+              }}               
           />
           </View>
       );
     }
 }
 
-const styles = StyleSheet.create({
-  contentContainer: {
-    marginVertical: 5,
-    alignItems: 'stretch',
-    backgroundColor: '#EAE5E5',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  image: {
-    height: 200,
-    borderRadius: 10,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  login: {
-    textAlign: 'center',
-    color: 'gray',
-    padding: 5,
-    fontSize: 20,
-    textTransform: 'uppercase',
-  }
-  });
+// const styles = StyleSheet.create({
+//   contentContainer: {
+//     marginVertical: 5,
+//     alignItems: 'stretch',
+//     backgroundColor: '#EAE5E5',
+//     justifyContent: 'center',
+//     alignItems: 'center'
+//   },
+//   image: {
+//     height: 200,
+//     borderRadius: 10,
+//     justifyContent: 'center',
+//     alignItems: 'center'
+//   },
+//   login: {
+//     textAlign: 'center',
+//     color: 'gray',
+//     padding: 5,
+//     fontSize: 20,
+//     textTransform: 'uppercase',
+//   }
+//   });

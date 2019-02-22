@@ -1,5 +1,4 @@
-Converted Angular1 (also on this Github) to a React native app.
-Constructed in Expo iOS simulator, looks perfect in at least iPhone XR - 12.1 ...
+Constructed in Expo iOS simulator, looks perfect in at least iPhone XR - 12.1 ... as a later step I will adjust CSS to get the same appearance on an Android device.
 
 Project published and uploaded to Expo.
 
@@ -23,5 +22,9 @@ Bilar:
 Contact:
 * Input fields from react-native-elements
 * Map imported from expo
-* Contact details goes to phpmyadmin db. I used PHP and Axios to accompish that. Working on localhost so far.
+* Contact details goes to phpmyadmin db. I used PHP and Axios to accompish   that. Working on localhost so far.
 * See database sql code in the tree.
+
+Login:
+* Your login details are saved in mysql database
+* Click on "Login" redirect you to a hidden page

@@ -1,5 +1,12 @@
 import React from 'react';
-import { ScrollView, TouchableOpacity, StyleSheet, Text, View, Image, Linking } from 'react-native';
+import {  ScrollView, 
+          TouchableOpacity, 
+          StyleSheet, 
+          Text, 
+          View, 
+          Image,
+           Linking 
+          } from 'react-native';
 import { SocialIcon } from 'react-native-elements';
 import Menu from './components/Menu';
 import HeaderComp from './components/Header';
