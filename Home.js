@@ -22,10 +22,6 @@ export default class Home extends React.Component {
   render() { 
     toggleHidden = () => {
       this.setState({isHidden: !this.state.isHidden})
-      if(this.state.isHidden) {
-        console.log('true')
-      }
-      else {console.log('false')}
     }
 
     return (

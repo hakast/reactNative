@@ -27,4 +27,5 @@ Contact:
 
 Login:
 * Your login details are saved in mysql database
-* Click on "Login" redirect you to a hidden page
+* Click on "Login" redirect you to a hidden page. Use Admin, admin
+* Log ut button on hidden page which redirect tom homepage

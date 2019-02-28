@@ -53,7 +53,7 @@ export default class AfterLogin extends Component {
         <TouchableOpacity style={styles.buttonStyling}>
         <Button
         
-              onPress={this.onLogout.bind(this) } 
+                onPress={this.onLogout.bind(this) } 
                 title="  TILLBAKA TILL FÖRSTA SIDAN"
                 type='clear'
                 titleStyle={{color: 'white'}}

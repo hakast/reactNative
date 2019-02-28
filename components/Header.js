@@ -3,6 +3,13 @@ import { View } from 'react-native';
 import { Header } from 'react-native-elements';
 
 export default class HeaderComp extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      persons: [],
+      isHidden: true
+    }
+  }
 
   render() {
         return (
@@ -34,26 +41,3 @@ export default class HeaderComp extends React.Component {
       );
     }
 }
-
-// const styles = StyleSheet.create({
-//   contentContainer: {
-//     marginVertical: 5,
-//     alignItems: 'stretch',
-//     backgroundColor: '#EAE5E5',
-//     justifyContent: 'center',
-//     alignItems: 'center'
-//   },
-//   image: {
-//     height: 200,
-//     borderRadius: 10,
-//     justifyContent: 'center',
-//     alignItems: 'center'
-//   },
-//   login: {
-//     textAlign: 'center',
-//     color: 'gray',
-//     padding: 5,
-//     fontSize: 20,
-//     textTransform: 'uppercase',
-//   }
-//   });

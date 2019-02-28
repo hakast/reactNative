@@ -29,16 +29,13 @@ export default class Github extends Component {
   render() {
     toggleHidden = () => {
       this.setState({isHidden: !this.state.isHidden})
-      if(this.state.isHidden) {
-        console.log('true')
-      }
-      else {console.log('false')}
     }
 
         return (
         <View>
           {/* RENDERING HEADER AND MENU COMPONENTS */}
           <HeaderComp navigation={this.props.navigation} /> 
+          
           {!this.state.isHidden && 
           <Menu navigation={this.props.navigation} />}
 
